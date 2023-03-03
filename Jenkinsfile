@@ -7,7 +7,7 @@ pipeline {
     DEPLOY_GITREPO_USER = "cusex-btech"    
     DEPLOY_GITREPO_URL = "github.com/${DEPLOY_GITREPO_USER}/spring-petclinic-helmchart.git"
     DEPLOY_GITREPO_BRANCH = "main"
-    DEPLOY_GITREPO_TOKEN = credentials('btech-dummy-github-token')
+    DEPLOY_GITREPO_TOKEN = credentials('github-token')
   }
   tools {
     maven 'maven-poc'
