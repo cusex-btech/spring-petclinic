@@ -78,7 +78,7 @@ pipeline {
           # After cloning
           cd deploy
           # update values.yaml
-          sed -i -r 's,repository: (.+),repository: ${env.HARBOR_URL}/samples/spring-petclinic,' values.yaml
+          sed -i -r 's,repository: (.+),repository: ${env.HARBOR_URL}/big/samples/spring-petclinic,' values.yaml
           sed -i 's/tag: v1.0.*/tag: v1.0.${env.BUILD_ID}/' values.yaml
           cat values.yaml
           git commit -am 'bump up version number'
